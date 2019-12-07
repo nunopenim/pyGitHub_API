@@ -1,21 +1,19 @@
 import urllib.request as url
 import json
 
-VERSION = "0.1.0 - Alpha release"
+VERSION = "0.1.1 - Alpha release"
 APIURL = "http://api.github.com/repos/"
 
 def vercheck() -> str:
     return str(VERSION)
 
 def getData(repoURL):
-    with url.urlopen(APIURL + repoURL + "/releases") as data_raw:
-        repoData = json.loads(data_raw.read().decode())
-        return repoData
-
-def validateData(repoData):
-    if len(repoData)>0:
-        return True
-    return False
+    try:
+        with url.urlopen(APIURL + repoURL + "/releases") as data_raw:
+            repoData = json.loads(data_raw.read().decode())
+            return repoData
+    except:
+        return None
 
 def getLastestReleaseData(repoData):
     return repoData[0]
