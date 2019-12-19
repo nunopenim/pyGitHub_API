@@ -1,7 +1,8 @@
 import urllib.request as url
 import json
+import datetime
 
-VERSION = "0.1.1 - Alpha release"
+VERSION = "0.1.2 - Alpha release"
 APIURL = "http://api.github.com/repos/"
 
 def vercheck() -> str:
@@ -29,8 +30,7 @@ def getReleaseDate(releaseData):
 
 def getAssetsSize(releaseData):
     return len(releaseData['assets'])
-    
-#still needs to get datetime shit here
+  
 def getAssets(releaseData):
     return releaseData['assets']
 
@@ -40,4 +40,8 @@ def getReleaseFileName(asset):
 def getReleaseFileURL(asset):
     return asset['browser_download_url']
 
+def getDownloadCount(asset):
+    return asset['download_count']
 
+def getSize(asset):
+    return asset['size']
