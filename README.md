@@ -35,8 +35,8 @@ or change the license under which the project is built, if needed.
 
 # References:
 
-All the methods here created were developed by myself, so the code belongs to me. It is licensed under GPL-3.0, 
-which means you are free to use it, even for commercial purposes, as long as it stays open source. For the development
+All the methods here created were developed by myself, so the code belongs to me. It is licensed under [DBADPL-B](https://github.com/nunopenim/DBADPL-B), 
+which means you are free to use it, even for commercial purposes, but with proper crediting if no changes were made. For the development
 process (past, present and future), I used the [GitHub REST API v3 manual](https://developer.github.com/v3/) as a reference, as
 well as a bit of common sense and naiveness. The GitHub API and all it's data, services and products provided do not belong to 
 me in any way, shape or form.
